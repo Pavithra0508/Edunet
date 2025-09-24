@@ -1,7 +1,7 @@
 /* -------------------- Start Page -------------------- */
 .start-body {
   background-image: url("pic1.jpg");
-  background-size: cover;         /* cover full screen */
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   margin: 0;
@@ -16,7 +16,7 @@
   text-align: center;
   color: white;
   padding: 20px;
-  background: rgba(0,0,0,0.45); /* slightly dark overlay for readability */
+  background: rgba(0,0,0,0.45);
   border-radius: 12px;
 }
 
@@ -43,23 +43,24 @@
 .quiz-body {
   font-family: Arial, sans-serif;
   background-image: url("pic2.jpg");
-  background-size: cover;         /* full screen */
+  background-size: cover;           /* cover full screen */
   background-position: center;
   background-repeat: no-repeat;
   margin: 0;
-  min-height: 100vh;              /* fill full viewport */
-  padding: 10px;
+  min-height: 100vh;                /* ensure full height */
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;            /* stack content vertically */
+  justify-content: flex-start;       /* start from top */
+  align-items: center;
+  padding: 10px;
 }
 
 /* Container semi-transparent to see background */
 .container {
   width: 90%;
   max-width: 800px;
-  margin: 40px auto;
-  background: rgba(255, 255, 255, 0.9); /* semi-transparent */
+  margin: 20px 0;                    /* reduce top/bottom margin */
+  background: rgba(255, 255, 255, 0.95);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px gray;
@@ -162,7 +163,7 @@ h2 {
 @media (max-width: 480px) {
   .start-container h1 { font-size: 1.8rem; }
   .start-btn { font-size: 1rem; padding: 10px 20px; }
-  .container { margin: 20px auto; padding: 12px; }
+  .container { margin: 15px 0; padding: 12px; }
   h2 { font-size: 1.1rem; }
   .question { font-size: 0.95rem; }
   .btn { font-size: 0.9rem; padding: 8px 15px; max-width: none; }
