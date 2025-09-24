@@ -1,69 +1,135 @@
-/* -------------------- Start Page -------------------- */
+/* -------------------- Home Page -------------------- */
 .start-body {
-  background-image: url("pic1.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   margin: 0;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Times New Roman', Times, serif;
+  background-image: url("pic1.jpg"); /* replace with your desired image URL */
+  background-size: cover;         /* ensures full screen */
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .start-container {
   text-align: center;
   color: white;
-  padding: 20px;
-  background: rgba(0,0,0,0.45);
+  padding: 40px 30px;
+  background: rgba(0, 0, 0, 0.45); /* dark overlay for readability */
   border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 .start-container h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
 }
 
 .start-btn {
   display: inline-block;
-  padding: 12px 25px;
-  background: darkblue;
+  padding: 14px 30px;
+  background: #ff6f61;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 6px;
   font-size: 1.2rem;
+  transition: all 0.3s ease;
 }
 
 .start-btn:hover {
-  background: navy;
+  background: #ff3b2e;
+  transform: scale(1.05);
+}
+
+/* -------------------- Responsive Home Page -------------------- */
+@media (max-width: 768px) {
+  .start-container {
+    padding: 30px 20px;
+  }
+
+  .start-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .start-btn {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .start-container {
+    padding: 20px 15px;
+  }
+
+  .start-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .start-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+
+.start-container {
+  text-align: center;
+  color: white;
+  padding: 40px 30px;
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent overlay */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.start-container h1 {
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+}
+
+.start-btn {
+  display: inline-block;
+  padding: 14px 30px;
+  background: #ff6f61;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.start-btn:hover {
+  background: #ff3b2e;
+  transform: scale(1.05);
 }
 
 /* -------------------- Quiz Page -------------------- */
 .quiz-body {
   font-family: Arial, sans-serif;
-  background-image: url("pic2.jpg");
-  background-size: cover;           /* cover full screen */
+  background-image: url("pic3.jpg"); /* quiz background */
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   margin: 0;
-  min-height: 100vh;                /* ensure full height */
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;            /* stack content vertically */
-  justify-content: flex-start;       /* start from top */
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   padding: 10px;
 }
 
-/* Container semi-transparent to see background */
 .container {
   width: 90%;
   max-width: 800px;
-  margin: 20px 0;                    /* reduce top/bottom margin */
-  background: rgba(255, 255, 255, 0.95);
+  margin: 20px 0;
+  background: rgba(255, 255, 255, 0.95); /* semi-transparent */
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px gray;
+  box-shadow: 0 0 10px gray;
   text-align: left;
 }
 
@@ -124,14 +190,14 @@ h2 {
   text-align: center;
 }
 
-/* End screen overlay */
+/* -------------------- End Screen -------------------- */
 .end-screen {
   position: fixed;
   inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("pic3.jpg");
+  background-image: url("https://images.unsplash.com/photo-1517502166878-35c93a0072bb"); /* darker for text visibility */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -139,7 +205,7 @@ h2 {
 }
 
 .end-screen .card {
-  background: rgba(0,0,0,0.55);
+  background: rgba(0, 0, 0, 0.75); /* darker overlay */
   color: white;
   padding: 28px 36px;
   border-radius: 12px;
@@ -149,11 +215,7 @@ h2 {
 
 /* -------------------- Responsive -------------------- */
 @media (max-width: 768px) {
-  .container {
-    width: 95%;
-    padding: 15px;
-  }
-
+  .container { width: 95%; padding: 15px; }
   h2 { font-size: 1.3rem; }
   .question { font-size: 1rem; }
   .options label { font-size: 0.95rem; padding: 10px; }
@@ -161,8 +223,8 @@ h2 {
 }
 
 @media (max-width: 480px) {
-  .start-container h1 { font-size: 1.8rem; }
-  .start-btn { font-size: 1rem; padding: 10px 20px; }
+  .start-container h1 { font-size: 2rem; }
+  .start-btn { font-size: 1rem; padding: 12px 20px; }
   .container { margin: 15px 0; padding: 12px; }
   h2 { font-size: 1.1rem; }
   .question { font-size: 0.95rem; }
