@@ -10,8 +10,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  /* Prevent scrolling */
   overflow: hidden;
   position: relative;
 }
