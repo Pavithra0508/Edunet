@@ -1,9 +1,10 @@
+/* -------------------- Start Page -------------------- */
 .start-body {
   background-image: url("pic1.jpg");
-  background-size: cover;
+  background-size: cover;         /* cover full screen */
   background-position: center;
   background-repeat: no-repeat;
-  margin: 0; 
+  margin: 0;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -15,6 +16,8 @@
   text-align: center;
   color: white;
   padding: 20px;
+  background: rgba(0,0,0,0.45); /* slightly dark overlay for readability */
+  border-radius: 12px;
 }
 
 .start-container h1 {
@@ -36,21 +39,27 @@
   background: navy;
 }
 
+/* -------------------- Quiz Page -------------------- */
 .quiz-body {
   font-family: Arial, sans-serif;
   background-image: url("pic2.jpg");
-  background-size: cover;
+  background-size: cover;         /* full screen */
   background-position: center;
   background-repeat: no-repeat;
   margin: 0;
+  min-height: 100vh;              /* fill full viewport */
   padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
+/* Container semi-transparent to see background */
 .container {
   width: 90%;
   max-width: 800px;
   margin: 40px auto;
-  background: white;
+  background: rgba(255, 255, 255, 0.9); /* semi-transparent */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px gray;
@@ -91,8 +100,8 @@ h2 {
   margin-top: 15px;
   cursor: pointer;
   font-size: 1rem;
-  width: 100%;      
-  max-width: 200px; 
+  width: 100%;
+  max-width: 200px;
 }
 
 .btn:hover {
@@ -114,6 +123,7 @@ h2 {
   text-align: center;
 }
 
+/* End screen overlay */
 .end-screen {
   position: fixed;
   inset: 0;
@@ -136,6 +146,7 @@ h2 {
   max-width: 90%;
 }
 
+/* -------------------- Responsive -------------------- */
 @media (max-width: 768px) {
   .container {
     width: 95%;
@@ -154,5 +165,5 @@ h2 {
   .container { margin: 20px auto; padding: 12px; }
   h2 { font-size: 1.1rem; }
   .question { font-size: 0.95rem; }
-  .btn { font-size: 0.9rem; padding: 8px 15px; max-width: none; } 
+  .btn { font-size: 0.9rem; padding: 8px 15px; max-width: none; }
 }
