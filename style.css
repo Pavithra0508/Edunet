@@ -10,6 +10,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  /* Prevent scrolling */
+  overflow: hidden;
+  position: relative;
 }
 
 .start-container {
@@ -19,6 +23,8 @@
   background: rgba(0, 0, 0, 0.45);
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  max-height: 90vh; 
+  overflow: auto;   
 }
 
 .start-container h1 {
@@ -39,7 +45,7 @@
 }
 
 .start-btn:hover {
-  background: darkblue;
+  background: navy;
   transform: scale(1.05);
 }
 
@@ -170,4 +176,8 @@ h2 {
   .start-container { padding: 20px 15px; }
   .start-container h1 { font-size: 1.8rem; }
   .start-btn { font-size: 1rem; padding: 10px 20px; }
+  .start-container {
+    max-height: 90vh;  
+    overflow: auto;    
+  }
 }
